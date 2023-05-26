@@ -198,7 +198,7 @@ impl fmt::Display for EnttecDmxPort {
 #[cfg(unix)]
 fn is_enttec(info: &UsbPortInfo) -> bool {
     if let Some(product) = &info.product {
-        return product == "DMX USB PRO";
+        return product == "DMX USB PRO" || product == "FT232 Serial (UART) IC";
     }
     false
 }
